@@ -1,19 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummary from './forecast-summary';
-import PropTypes from 'prop-types';
 
 const App = props => (
   <div>
-    <LocationDetails city={props.location.city}
-      country={props.location.country} />
-  </div>
-  <div>
-    <ForecastSummary
-      date={props.forecast.date}
-      temperature={props.forecast.temperature}
-      description={props.forecast.description}
-      icon={props.forecast.icon} />
+    <div>
+      <LocationDetails city={props.location.city} country={props.location.country} />
+    </div>
+    <div>
+      <ForecastSummary
+        date={props.forecast.date}
+        temperature={props.forecast.temperature}
+        description={props.forecast.description}
+        icon={props.forecast.icon}
+      />
+    </div>
   </div>
 );
 
