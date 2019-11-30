@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ForecastSummary from '../../src/components/forecast-summary';
+import ForecastSummary from '../components/forecast-summary';
 
 it('renders the date', () => {
   const wrapper = shallow(
@@ -12,7 +12,7 @@ it('renders the date', () => {
     />,
   );
 
-  expect(wrapper.find('.forecast-summary__date').text()).toEqual('mockDate');
+  expect(wrapper.find('.date').text()).toEqual('mockDate');
 });
 
 it('renders the temperature', () => {
@@ -25,7 +25,7 @@ it('renders the temperature', () => {
     />,
   );
 
-  expect(wrapper.find('.forecast-summary__temperature').text()).toEqual('mockTemperature');
+  expect(wrapper.find('.temperature').text()).toEqual('mockTemperature');
 });
 
 it('renders the description', () => {
@@ -38,7 +38,7 @@ it('renders the description', () => {
     />,
   );
 
-  expect(wrapper.find('.forecast-summary__description').text()).toEqual('mockDescription');
+  expect(wrapper.find('.description').text()).toEqual('mockDescription');
 });
 
 it('renders the icon', () => {
@@ -51,5 +51,5 @@ it('renders the icon', () => {
     />,
   );
 
-  expect(wrapper.find('.forecast-summary__icon').text()).toEqual('mockIcon');
+  expect(wrapper.find('.icon').text()).toEqual('mockIcon');
 });
