@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummary from './forecast-summary';
 import ForecastSummaries from './forecast-summaries';
+import '../styles/app.scss';
+import '../styles/forecast-summaries.scss';
 
 const App = props => (
   <div className="forecast">
-
     <LocationDetails city={props.location.city} country={props.location.country} />
-
 
     <ForecastSummary
       date={props.forecasts.date}
@@ -18,7 +18,6 @@ const App = props => (
     />
 
     <ForecastSummaries forecasts={props.forecasts} />
-
   </div>
 );
 
@@ -30,12 +29,9 @@ App.propTypes = {
   forecasts: PropTypes.array.isRequired,
 };
 
-
 //   date: PropTypes.string.isRequired,
 //   temperate: PropTypes.number.isRequired,
 //   description: PropTypes.string.isRequired,
 // }).isRequired,
-
-
 
 export default App;
