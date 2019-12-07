@@ -10,12 +10,12 @@ const App = props => (
   <div className="forecast">
     <LocationDetails city={props.location.city} country={props.location.country} />
 
-    <ForecastSummary
+    {/* <ForecastSummary
       date={props.forecasts.date}
       temperature={props.forecasts.temperature}
       description={props.forecasts.description}
       icon={props.forecasts.icon}
-    />
+    /> */}
 
     <ForecastSummaries forecasts={props.forecasts} />
   </div>
