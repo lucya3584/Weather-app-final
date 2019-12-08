@@ -6,6 +6,7 @@ import ForecastSummaries from './forecast-summaries';
 import ForecastDetails from './forecast-details';
 import '../styles/app.scss';
 import '../styles/forecast-summaries.scss';
+import SearchForm from './search-form';
 
 class App extends React.Component {
   constructor(props) {
@@ -63,10 +64,10 @@ class App extends React.Component {
     return (
       <div>
         <LocationDetails city={this.state.location.city} country={this.props.location.country} />
-
+        <SearchForm searchCity={this.getCity} />
         <ForecastSummaries
           forecasts={this.state.forecasts}
-onForecastSelect={this.handleForecastSelector}
+          onForecastSelect={this.handleForecastSelector}
         />
         {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
       </div>
