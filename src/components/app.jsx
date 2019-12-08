@@ -24,11 +24,11 @@ class App extends React.Component {
     this.handleForecastSelector = this.handleForecastSelector.bind(this);
   }
 
-  handleForecastSelector(date) {
+  handleForecastSelector = date => {
     this.setState({
       selectedDate: date,
     });
-  }
+  };
 
   componentDidMount() {
     Axios.get(`https://mcr-codes-weather.herokuapp.com/forecast`).then(response => {
