@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/app.scss';
-import '../styles/forecast-summaries.scss';
+
+import '../styles/forecast-detail.scss';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
@@ -13,11 +13,17 @@ class ForecastDetails extends React.Component {
       <span className='windSpeed'>Wind Speed: {this.props.forecast.wind.speed} mph	</span>
       <span className='windDirection'>Wind Direction: {this.props.forecast.wind.direction}</span>
       <span className='humidity'>Humidity: {this.props.forecast.humidity}</span>
-    </div>;
+    </div>
 
   }
 };
-
-
+ForecastDetails.propTypes = {
+  detailedDate: PropTypes.array.isRequired,
+  maxTemp: PropTypes.number.isRequired,
+  minTemp: PropTypes.number.isRequired,
+  humidity: PropTypes.number.isRequired,
+  windSpeed: PropTypes.number.isRequired,
+  windDirectionx: PropTypes.number.isRequired,
+};
 
 export default ForecastDetails;
