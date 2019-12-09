@@ -9,7 +9,6 @@ class ForecastSummary extends React.Component {
   render() {
     return (
       <div className="forecast-summary">
-
         <span className="icon">
           <WeatherIcon name="owm" iconId={this.props.icon} flip="horizontal" rotate="90" />
         </span>

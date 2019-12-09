@@ -28,12 +28,11 @@ class SearchForm extends React.Component {
           onChange={this.handleInputChange}
           className="search"
           type="text"
-          placeholder="Search for a city"
-        ></input>
+          placeholder="Add your city"
+         />
 
         <button className="submitButton" onClick={e => searchCity(e, searchText)} type="submit">
           Submit
-        
         </button>
       </div>
     );
