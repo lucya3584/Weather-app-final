@@ -19,16 +19,10 @@ class App extends React.Component {
         city: '',
         country: '',
       },
-      background: '',
+      // background: '',
     };
     this.handleForecastSelector = this.handleForecastSelector.bind(this);
   }
-
-  handleForecastSelector = date => {
-    this.setState({
-      selectedDate: date,
-    });
-  };
 
   componentDidMount() {
     Axios.get(`https://mcr-codes-weather.herokuapp.com/forecast`).then(response => {
@@ -41,6 +35,12 @@ class App extends React.Component {
       });
     });
   }
+
+  handleForecastSelector = date => {
+    this.setState({
+      selectedDate: date,
+    });
+  };
 
   getCity = (e, city) => {
     e.preventDefault();
@@ -57,8 +57,10 @@ class App extends React.Component {
   };
 
   render() {
-    const selectedForecast = this.state.forecasts.find(
-      forecast => forecast.date === this.state.selectedDate,
+    const { forecasts, selectedForecast } = this.state;
+
+    const selectedForecast = forecasts.find(
+      forecast => forecast.date === selectedDate,
     );
 
     return (
